@@ -26,7 +26,16 @@ html, body {
   z-index: 1;
 }
 
-  .home {
-    padding-top: 80px;
-    margin-left: 50px;
-  }
+.narvbar, a {
+  color: #ffffff;
+}
+
+.form {
+  padding-top: 80px;
+  margin-left: 50px;
+}
+
+.home {
+  padding-top: 80px;
+  margin-left: 50px;
+}
