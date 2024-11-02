@@ -31,7 +31,7 @@ const CreatePage = () => {
         <div className='form'>
             <h2>Post new activity</h2>
             <form onSubmit={handleCreateActivity}>
-                <input type='text' onChange={handleChange} name='name' placeholder='Activity name' value={activityData.name} required />
+                <input type='text' onChange={handleChange} name='activityName' placeholder='Activity name' value={activityData.activityName} required />
                 <input type='text' onChange={handleChange} name='description' placeholder='Activity description' value={activityData.description} required />
                 <input type='text' onChange={handleChange} name='category' placeholder='Activity category' value={activityData.category} required />
                 <button type='submit'>Create</button>
