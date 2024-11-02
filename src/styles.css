@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  color: #ffffff;
+  font-weight: 500;
+  padding: 30px;
+  position: fixed;
+  justify-content: flex-end;
+  gap: 40px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgb(49, 107, 173);
+  z-index: 1;
+}
+
+  .home {
+    padding-top: 80px;
+    margin-left: 50px;
+  }
