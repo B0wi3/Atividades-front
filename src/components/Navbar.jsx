@@ -1,8 +1,20 @@
-const NavBar = () => {
-    const isLoggedIn = !!localStorage.getItem("token");
+import React, { useState } from 'react';
 
-    const handleLogout = () => {
-        localStorage.removeItem("token");
+const NavBar = () => {
+    const [ isLoggedIn, setIsLoggedIn ] = useState(!!localStorage.getItem('token'));
+
+    const handleLogout = async () => {
+        try {
+            await axios.post('http://192.168.15.105:8080/auth/logout', {}, {
+                headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+            });
+        } catch (error) {
+            console.error("Logout request failed: ", error);
+        } finally {
+            localStorage.removeItem('token');
+            setIsLoggedIn(false);
+            window.location.href = '/';
+        }
     };
 
     return (
