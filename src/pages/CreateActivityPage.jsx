@@ -12,10 +12,10 @@ const CreatePage = () => {
 
         try {
             const response = await createActivity(activityData);
-            console.log('Atividade criada: ', activityData);
             alert('Atividade criada.');
             window.location.href = '/';
         } catch (error) {
+            alert('Erro ao tentar criar atividade.')
             console.error(error);
         }
     };
@@ -28,7 +28,7 @@ const CreatePage = () => {
     };
 
     return (
-        <div className='form'>
+        <div className='activity-form'>
             <h2>Post new activity</h2>
             <form onSubmit={handleCreateActivity}>
                 <input type='text' onChange={handleChange} name='activityName' placeholder='Activity name' value={activityData.activityName} required />

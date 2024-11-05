@@ -30,12 +30,115 @@ html, body {
   color: #ffffff;
 }
 
-.form {
+.home {
+  padding-top: 200px;
+  margin-left: 130px;
+  width: 80%;
+}
+
+.home h1 {
+  font-size: 80px;
+}
+
+.home p {
+  font-size: 20px;;
+}
+
+.activities {
+  margin-top: 230px;
+}
+
+.activities h2 {
+  margin-bottom: 50px;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.activity-form {
+  padding-top: 120px;
+  margin-left: 70px;
+}
+
+.activity-form form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 30%;
+}
+
+.activity-form button {
+  width: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.activities {
+  text-align: center;
+  padding: 20px;
+}
+
+.activity-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Distância entre os itens */
+  justify-content: center; /* Centraliza os itens */
+}
+
+.activity-item {
+  width: 300px; /* Largura do card */
+  height: 200px; /* Altura do card, mantendo a proporção 3:4 (largura 200px * 4/3) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: #000000;
+  font-weight: bold;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+/* Cores pastel - ajustando para algo suave */
+.activity-item:nth-child(1) {
+  background-color: #f7d1cd; /* Rosa pastel */
+}
+
+.activity-item:nth-child(2) {
+  background-color: #e0f7fa; /* Azul claro */
+}
+
+.activity-item:nth-child(3) {
+  background-color: #dcedc8; /* Verde claro */
+}
+
+.activity-item:nth-child(4) {
+  background-color: #fff9c4; /* Amarelo claro */
+}
+
+.activity-item:nth-child(5) {
+  background-color: #ffccbc; /* Laranja claro */
+}
+
+.activity-item:nth-child(6) {
+  background-color: #f3e5f5; /* Lilás claro */
+}
+
+/* Adicione mais se necessário */
+
+
+.login {
   padding-top: 80px;
   margin-left: 50px;
 }
 
-.home {
+.register {
   padding-top: 80px;
   margin-left: 50px;
 }

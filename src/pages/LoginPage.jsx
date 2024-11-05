@@ -7,10 +7,8 @@ const LoginPage = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         console.log('Tentando realizar login...');
-        console.log(credentials);
         try {
             const response = await login(credentials);
-            console.log('Token armazenado: ', response.token);
             alert('Login realizado.');
             window.location.href = '/';
         } catch (error) {
@@ -27,7 +25,7 @@ const LoginPage = () => {
     };
 
     return (
-        <div className='form'>
+        <div className='login'>
             <h2>Login</h2>
             <form onSubmit={handleLogin}>
                 <input type='text' onChange={handleChange} name='username' placeholder='username' value={credentials.username} required />

@@ -26,7 +26,7 @@ const RegisterPage = () => {
     };
 
     return (
-        <div className='form'>
+        <div className='register'>
             <h2>Sign up</h2>
             <form onSubmit={handleRegister}>
                 <input type='text' onChange={handleChange} name='username' placeholder='username' value={registerData.username} required />
