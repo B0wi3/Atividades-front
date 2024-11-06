@@ -1,8 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { createActivity } from '../services/api';
+import { useNavigate } from 'react-router-dom';
 
 const CreatePage = () => {
     const [activityData, setActivityData] = useState({ activityName: '', description: '', category: ''});
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const checkToken = async () => {
+            const token = localStorage.getItem('token');
+            if (!token || !(await validateToken(token))) {
+                alert('Sessão expirada. Por favor, faça login novamente.');
+                window.location.href = '/login';
+            }
+        };
+        
+        checkToken();
+    }, [navigate]);
 
     const handleCreateActivity = async (e) => {
         e.preventDefault();
